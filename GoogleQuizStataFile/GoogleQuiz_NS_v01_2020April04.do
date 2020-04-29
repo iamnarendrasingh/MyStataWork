@@ -26,7 +26,7 @@ local Phase Phase1
 
 *File path start here
 global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
-global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
 *File path ends here
 
 *Macro Code ends here
