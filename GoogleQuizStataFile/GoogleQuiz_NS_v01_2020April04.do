@@ -105,3 +105,10 @@ save "`CCPX'_Quiz01_02_$date" , replace
 
 ***************************************************
 ******************Quiz02 ends here*****************
+
+
+
+
+
+ window manage restore
+ beep
