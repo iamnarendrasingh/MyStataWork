@@ -47,7 +47,7 @@ save `CCPX'_Quiz01_$date, replace
 *Importing Quiz 02
 
 clear
-capture import excel "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\PMAQuiz02.xlsx", sheet("Form responses 1") firstrow allstring
+capture import excel "$inputfiledir\PMAQuiz02.xlsx", sheet("Form responses 1") firstrow allstring
 
 rename Score 				scoreQuiz02
 rename नचअपनPMAआईडदरजकर 		RE
