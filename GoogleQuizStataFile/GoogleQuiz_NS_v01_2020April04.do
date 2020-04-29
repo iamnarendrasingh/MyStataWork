@@ -19,7 +19,7 @@ global date=subinstr("`c_today'", " ", "",.)
 *Macro Code start here
 local Country RJ
 
-local CCPX RJP1
+global CCPX RJP1
 
 local Phase Phase1
 *Macro Code ends here
