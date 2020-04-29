@@ -6,11 +6,6 @@ set maxvar 15000
 set more off
 numlabel, add
 
-
-clear matrix
-clear
-set more off
-
 *date set for
 local today=c(current_date)
 local c_today= "`today'"
