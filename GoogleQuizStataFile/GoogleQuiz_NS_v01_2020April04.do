@@ -44,9 +44,44 @@ duplicates report
 destring scoreQuiz01 , replace
 save "$CCPX_Quiz01_$date", replace
 
-*Importing Quiz 02
+**********************************************
+****************Quiz02************************
 
 clear
+clear matrix
+clear mata
+capture log close
+set maxvar 15000
+set more off
+numlabel, add
+
+*date set for
+local today=c(current_date)
+local c_today= "`today'"
+local date=subinstr("`c_today'", " ", "",.)
+di "`date'"
+
+global date=subinstr("`c_today'", " ", "",.)
+*date set code ends 
+
+
+*Macro Code start here
+local Country RJ
+
+local CCPX RJP1
+
+local Phase Phase1
+*Macro Code ends here
+
+*File path start here
+global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
+*File path ends here
+
+*Macro Code ends here
+
+cd "$output"
+
 capture import excel "$inputfiledir\PMAQuiz02.xlsx", sheet("Form responses 1") firstrow allstring
 
 rename Score 				scoreQuiz02
@@ -58,52 +93,15 @@ rename लसटगकलएआरइकनमन 		squiz02Q3
 duplicates report
 
 destring scoreQuiz02 , replace
-save "CCPX_Quiz02_$date" , replace
+save "`CCPX'_Quiz02_$date" , replace
 
-clear 
-use RJP1_Quiz01_29Apr2020.dta 
-
-
-merge 1:1 RE using RJP1_Quiz02_29Apr2020
-rename _merge q1q2
-save "$output\$CCPX_Quiz01_02_$date" , replace
-
-clear
-capture import excel "$inputfiledir\PMA Quiz-03 April 15 ,2020 (Responses).xlsx", sheet("Form responses 1") firstrow allstring
-
-rename Score 				scoreQuiz03
-rename नचअपनPMAआईडदरजकर 		RE
-rename मपगवलसटगकदरनएक 		quiz03Q1
-rename सहयगलतएकसपरवइजरआरइ 		quiz03Q2
-
-
-duplicates report
-
-destring scoreQuiz03 , replace
-save `CCPX'_Quiz03_$date, replace
-
-clear 
-use RJP1_Quiz01_29Apr2020.dta 
-
+cd "$output"
+use "`CCPX'_Quiz01_$date" 
 
 merge 1:1 RE using RJP1_Quiz02_29Apr2020
-rename _merge q1q2
-save "$output\`CCPX'_Quiz01_02_$date, replace"
+rename _merge mergeQ1Q2
+cd "$output"
+save "`CCPX'_Quiz01_02_$date" , replace
 
-
-
-*this should in last
-sort RE
-order RE score*
-beep 3
-
-
-	
-/*	
-	if _rc==0 {
-	tostring *, replace force
-	save `tempList', replace
-	use `CCPX'_Quiz01_$date.dta
-	append using `tempList', force
-	save `CCPX'_Quiz01_$date.dta, replace	
-}
+***************************************************
+******************Quiz02 ends here*****************
