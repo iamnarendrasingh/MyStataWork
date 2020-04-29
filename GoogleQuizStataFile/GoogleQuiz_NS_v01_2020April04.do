@@ -70,6 +70,9 @@ merge 1:1 RE using RJP1_Quiz02_29Apr2020
 *this should in last
 sort RE
 order RE score*
+beep 3
+
+
 	
 /*	
 	if _rc==0 {
