@@ -42,7 +42,7 @@ rename Q2PMAकअनसरआरईकनसस 	quiz01Q2
 duplicates report
 
 destring scoreQuiz01 , replace
-save `CCPX'_Quiz01_$date, replace
+save "$CCPX_Quiz01_$date", replace
 
 *Importing Quiz 02
 
