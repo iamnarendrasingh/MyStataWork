@@ -58,13 +58,38 @@ rename लसटगकलएआरइकनमन 		squiz02Q3
 duplicates report
 
 destring scoreQuiz02 , replace
-save `CCPX'_Quiz02_$date, replace
+save "CCPX_Quiz02_$date" , replace
 
 clear 
 use RJP1_Quiz01_29Apr2020.dta 
 
 
 merge 1:1 RE using RJP1_Quiz02_29Apr2020
+rename _merge q1q2
+save "$output\$CCPX_Quiz01_02_$date" , replace
+
+clear
+capture import excel "$inputfiledir\PMA Quiz-03 April 15 ,2020 (Responses).xlsx", sheet("Form responses 1") firstrow allstring
+
+rename Score 				scoreQuiz03
+rename नचअपनPMAआईडदरजकर 		RE
+rename मपगवलसटगकदरनएक 		quiz03Q1
+rename सहयगलतएकसपरवइजरआरइ 		quiz03Q2
+
+
+duplicates report
+
+destring scoreQuiz03 , replace
+save `CCPX'_Quiz03_$date, replace
+
+clear 
+use RJP1_Quiz01_29Apr2020.dta 
+
+
+merge 1:1 RE using RJP1_Quiz02_29Apr2020
+rename _merge q1q2
+save "$output\`CCPX'_Quiz01_02_$date, replace"
+
 
 
 *this should in last
