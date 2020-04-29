@@ -15,21 +15,23 @@ di "`date'"
 global date=subinstr("`c_today'", " ", "",.)
 *date set code ends 
 
+
+*Macro Code start here
 local Country RJ
 
 local CCPX RJP1
 
 local Phase Phase1
+*Macro Code ends here
 
-
+*File path start here
 global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
 global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined"
+*File path ends here
+
+*Macro Code ends here
 
 cd "$output"
-
-*Added second csv file for multiple versions
-tempfile tempList
-
 
 import excel "$inputfiledir\PMAQuiz01.xlsx", sheet("Clean_Data") firstrow allstring
 rename नचअपनआईडदरजकर 			RE
