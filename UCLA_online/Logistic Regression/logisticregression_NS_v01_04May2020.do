@@ -15,6 +15,7 @@ numlabel, add
 
 *Example2
 
+*predictor means independent variables 
 
 *load datset 
 use https://stats.idre.ucla.edu/stat/stata/dae/binary.dta, clear
@@ -22,4 +23,9 @@ use https://stats.idre.ucla.edu/stat/stata/dae/binary.dta, clear
 cd "E:\Self_GitKraken\Working_Repo_GitHub\MyStataWork\UCLA_online\Logistic Regression\dataset"
 
 save binary.dta , replace 
+
+
+logit admit gre gpa i.rank
+
+save binary_output.dta 
 
