@@ -1,0 +1,433 @@
+clear
+clear matrix
+clear mata
+capture log close
+set maxvar 15000
+set more off
+numlabel, add
+
+*date set for
+local today=c(current_date)
+local c_today= "`today'"
+local date=subinstr("`c_today'", " ", "",.)
+di "`date'"
+
+global date=subinstr("`c_today'", " ", "",.)
+*date set code ends 
+
+
+*Macro Code start here
+local Country RJ
+
+global CCPX RJP1
+
+local Phase Phase1
+*Macro Code ends here
+
+*File path start here
+global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
+*File path ends here
+
+*Macro Code ends here
+
+cd "$output"
+
+import excel "$inputfiledir\PMAQuiz01.xlsx", sheet("Clean_Data") firstrow allstring
+rename नचअपनआईडदरजकर 			RE
+rename Score			    scoreQuiz01
+rename Q1कयकयलसटकरग 			quiz01Q1
+rename Q2PMAकअनसरआरईकनसस 	quiz01Q2
+
+duplicates report
+
+destring scoreQuiz01 , replace
+save "$CCPX_Quiz01_$date", replace
+
+**********************************************
+****************Quiz02************************
+
+clear
+clear matrix
+clear mata
+capture log close
+set maxvar 15000
+set more off
+numlabel, add
+
+*date set for
+local today=c(current_date)
+local c_today= "`today'"
+local date=subinstr("`c_today'", " ", "",.)
+di "`date'"
+
+global date=subinstr("`c_today'", " ", "",.)
+*date set code ends 
+
+
+*Macro Code start here
+local Country RJ
+
+local CCPX RJP1
+
+local Phase Phase1
+*Macro Code ends here
+
+*File path start here
+global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
+*File path ends here
+
+*Macro Code ends here
+
+cd "$output"
+
+capture import excel "$inputfiledir\PMAQuiz02.xlsx", sheet("Form responses 1") firstrow allstring
+
+rename Score 				scoreQuiz02
+rename नचअपनPMAआईडदरजकर 		RE
+rename एसडपकलसटगकदर 			quiz02Q1
+rename मपगवलसटगकदरनन 			quiz02Q2
+rename लसटगकलएआरइकनमन 		squiz02Q3
+
+duplicates report
+
+destring scoreQuiz02 , replace
+save "`CCPX'_Quiz02_$date" , replace
+
+
+
+**********************************************
+****************Quiz03************************
+
+clear
+clear matrix
+clear mata
+capture log close
+set maxvar 15000
+set more off
+numlabel, add
+
+*date set for
+local today=c(current_date)
+local c_today= "`today'"
+local date=subinstr("`c_today'", " ", "",.)
+di "`date'"
+
+global date=subinstr("`c_today'", " ", "",.)
+*date set code ends 
+
+
+*Macro Code start here
+local Country RJ
+
+local CCPX RJP1
+
+local Phase Phase1
+*Macro Code ends here
+
+*File path start here
+global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
+*File path ends here
+
+*Macro Code ends here
+
+cd "$output"
+
+capture import excel "$inputfiledir\PMA Quiz-03 April 15 ,2020 (Responses).xlsx", sheet("Form responses 1") firstrow allstring
+
+rename Score 				scoreQuiz03
+rename नचअपनPMAआईडदरजकर 		RE
+rename मपगवलसटगकदरनएक			quiz03Q01
+rename सहयगलतएकसपरवइजरआरइ 		quiz03Q02
+
+duplicates report
+
+destring scoreQuiz03 , replace
+save "`CCPX'_Quiz03_$date" , replace
+
+
+
+**********************************************
+****************Quiz04************************
+
+clear
+clear matrix
+clear mata
+capture log close
+set maxvar 15000
+set more off
+numlabel, add
+
+*date set for
+local today=c(current_date)
+local c_today= "`today'"
+local date=subinstr("`c_today'", " ", "",.)
+di "`date'"
+
+global date=subinstr("`c_today'", " ", "",.)
+*date set code ends 
+
+
+*Macro Code start here
+local Country RJ
+
+local CCPX RJP1
+
+local Phase Phase1
+*Macro Code ends here
+
+*File path start here
+global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
+*File path ends here
+
+*Macro Code ends here
+
+cd "$output"
+
+capture import excel "$inputfiledir\PMA Quiz-04 April 18 ,2020 (Responses).xlsx", sheet("Form responses 1") firstrow allstring
+
+rename Score 				scoreQuiz04
+rename नचअपनPMAआईडदरजकर 		RE
+rename परशन1सहयगलतवहपरतय		quiz04Q01
+rename परशन2सपरवईजरकदवरगण 		quiz04Q02
+rename परशन3सहयगलतएकआवसय 		quiz04Q03
+
+duplicates report
+
+destring scoreQuiz04 , replace
+save "`CCPX'_Quiz04_$date" , replace
+
+
+
+
+**********************************************
+****************Quiz05************************
+
+clear
+clear matrix
+clear mata
+capture log close
+set maxvar 15000
+set more off
+numlabel, add
+
+*date set for
+local today=c(current_date)
+local c_today= "`today'"
+local date=subinstr("`c_today'", " ", "",.)
+di "`date'"
+
+global date=subinstr("`c_today'", " ", "",.)
+*date set code ends 
+
+
+*Macro Code start here
+local Country RJ
+
+local CCPX RJP1
+
+local Phase Phase1
+*Macro Code ends here
+
+*File path start here
+global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
+*File path ends here
+
+*Macro Code ends here
+
+cd "$output"
+
+capture import excel "$inputfiledir\PMA Quiz-05 April 21 ,2020 (Responses).xlsx", sheet("Form responses 1") firstrow allstring
+
+rename Score 				scoreQuiz05
+rename नचअपनPMAआईडदरजकर 		RE
+rename परशन1सहयगलतयहबहतमह 		quiz05Q01
+rename परशन2परवररसटरभरतसमय 		quiz05Q02
+rename परशन3सहयगलतपरवरसर 		quiz05Q03
+duplicates report
+
+destring scoreQuiz05 , replace
+save "`CCPX'_Quiz05_$date" , replace
+
+
+**********************************************
+****************Quiz06************************
+
+clear
+clear matrix
+clear mata
+capture log close
+set maxvar 15000
+set more off
+numlabel, add
+
+*date set for
+local today=c(current_date)
+local c_today= "`today'"
+local date=subinstr("`c_today'", " ", "",.)
+di "`date'"
+
+global date=subinstr("`c_today'", " ", "",.)
+*date set code ends 
+
+
+*Macro Code start here
+local Country RJ
+
+local CCPX RJP1
+
+local Phase Phase1
+*Macro Code ends here
+
+*File path start here
+global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
+*File path ends here
+
+*Macro Code ends here
+
+cd "$output"
+
+capture import excel "$inputfiledir\PMA Quiz-06 April 24 ,2020 (Responses).xlsx", sheet("Form responses 1") firstrow allstring
+
+rename Score 				scoreQuiz06
+rename नचअपनPMAआईडदरजकर 		RE
+rename परशन1सहयगलतयदआरईन 		quiz06Q01
+rename परशन2परवररसटरभरतस 		quiz06Q02
+rename परशन3सहयगलतवटलटड		 quiz06Q03
+duplicates report
+
+destring scoreQuiz06 , replace
+save "`CCPX'_Quiz06_$date" , replace
+
+
+
+**********************************************
+****************Quiz07************************
+
+clear
+clear matrix
+clear mata
+capture log close
+set maxvar 15000
+set more off
+numlabel, add
+
+*date set for
+local today=c(current_date)
+local c_today= "`today'"
+local date=subinstr("`c_today'", " ", "",.)
+di "`date'"
+
+global date=subinstr("`c_today'", " ", "",.)
+*date set code ends 
+
+
+*Macro Code start here
+local Country RJ
+
+local CCPX RJP1
+
+local Phase Phase1
+*Macro Code ends here
+
+*File path start here
+global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
+*File path ends here
+
+*Macro Code ends here
+
+cd "$output"
+
+capture import excel "$inputfiledir\PMA Quiz-07 April 28 ,2020 (Responses).xlsx", sheet("Form responses 1") firstrow allstring
+
+rename Score 				scoreQuiz07
+rename नचअपनPMAआईडदरजकर 		RE
+rename Quiz071घरपरवरपरशनवल 	quiz07Q01
+rename Quiz072नमनपरभषकलए 		quiz07Q02
+rename Quiz073सहयगलतघरपरव 		quiz07Q03
+
+duplicates report
+
+destring scoreQuiz07 , replace
+save "`CCPX'_Quiz07_$date" , replace
+
+
+
+**********************************************
+****************Quiz08************************
+
+clear
+clear matrix
+clear mata
+capture log close
+set maxvar 15000
+set more off
+numlabel, add
+
+*date set for
+local today=c(current_date)
+local c_today= "`today'"
+local date=subinstr("`c_today'", " ", "",.)
+di "`date'"
+
+global date=subinstr("`c_today'", " ", "",.)
+*date set code ends 
+
+
+*Macro Code start here
+local Country RJ
+
+local CCPX RJP1
+
+local Phase Phase1
+*Macro Code ends here
+
+*File path start here
+global output 		"E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\OutputDataset"
+global inputfiledir "E:\Dropbox (Gates Institute)\PMA2020_INDIA\Performance Monitoring for Action\quiz\GoogleFormQuiz\Combined\Response"
+*File path ends here
+
+*Macro Code ends here
+
+cd "$output"
+
+capture import excel "$inputfiledir\PMA Quiz-08 May 01 ,2020 (Responses).xlsx", sheet("Form responses 1") firstrow allstring
+
+rename Score 					scoreQuiz08
+rename EnterPMAIDनचअपनPMAआईड 	RE
+rename Quiz08Q1ओडकमएकमहलपर	    quiz08Q01
+rename Quiz08Q2सहयगलतकयआरइ 	    quiz08Q02
+rename Quiz08Q3यदएकमहलघरपरह 		quiz08Q03
+duplicates report
+
+destring scoreQuiz08 , replace
+save "`CCPX'_Quiz08_$date" , replace
+
+
+/*
+
+cd "$output"
+use "`CCPX'_Quiz01_$date" 
+
+merge 1:1 RE using RJP1_Quiz02_29Apr2020
+rename _merge mergeQ1Q2
+
+
+cd "$output"
+save "`CCPX'_Quiz01_02_$date" , replace
+
+***************************************************
+******************Quiz02 ends here*****************
+
+
+
+
+
+ window manage restore
+ beep
