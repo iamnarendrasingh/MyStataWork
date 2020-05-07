@@ -408,6 +408,10 @@ duplicates report
 
 destring scoreQuiz08 , replace
 
+sort Timestamp
+by RE , sort: gen RE_duplicate = _n == 1
+drop if RE_duplicate== 0
+
 save "`CCPX'_Quiz08_$date" , replace
 
 
