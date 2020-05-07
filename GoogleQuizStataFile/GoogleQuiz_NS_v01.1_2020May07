@@ -46,6 +46,11 @@ drop if RE_duplicate== 0
 destring scoreQuiz01 , replace
 save `CCPX'_Quiz01 , replace
 
+cd "$output"
+export delimited using "RJP1_Quiz01.csv", replace
+
+
+
 **********************************************
 ****************Quiz02************************
 
@@ -98,6 +103,8 @@ drop if RE_duplicate== 0
 
 destring scoreQuiz02 , replace
 save `CCPX'_Quiz02 , replace
+cd "$output"
+export delimited using "RJP1_Quiz02.csv", replace
 
 
 
@@ -152,6 +159,8 @@ drop if RE_duplicate== 0
 
 destring scoreQuiz03 , replace
 save `CCPX'_Quiz03 , replace
+cd "$output"
+export delimited using "RJP1_Quiz03.csv", replace
 
 
 
@@ -207,6 +216,8 @@ drop if RE_duplicate== 0
 
 destring scoreQuiz04 , replace
 save `CCPX'_Quiz04 , replace
+cd "$output"
+export delimited using "RJP1_Quiz04.csv", replace
 
 
 **********************************************
@@ -261,6 +272,8 @@ drop if RE_duplicate== 0
 
 destring scoreQuiz05 , replace
 save `CCPX'_Quiz05 , replace
+cd "$output"
+export delimited using "RJP1_Quiz05.csv", replace
 
 
 **********************************************
@@ -316,6 +329,9 @@ drop if RE_duplicate== 0
 
 destring scoreQuiz06 , replace
 save `CCPX'_Quiz06 , replace
+cd "$output"
+export delimited using "RJP1_Quiz06.csv", replace
+
 
 
 
@@ -372,6 +388,8 @@ drop if RE_duplicate== 0
 
 destring scoreQuiz07 , replace
 save `CCPX'_Quiz07 , replace
+cd "$output"
+export delimited using "RJP1_Quiz07.csv", replace
 
 
 
@@ -429,7 +447,8 @@ by RE , sort: gen RE_duplicate = _n == 1
 drop if RE_duplicate== 0
 
 save `CCPX'_Quiz08 , replace
-
+cd "$output"
+export delimited using "RJP1_Quiz08.csv", replace
 
 /*
 
