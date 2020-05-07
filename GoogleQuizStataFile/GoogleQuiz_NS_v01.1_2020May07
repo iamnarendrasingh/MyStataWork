@@ -44,7 +44,7 @@ by RE , sort: gen RE_duplicate = _n == 1
 drop if RE_duplicate== 0
 
 destring scoreQuiz01 , replace
-save "$CCPX_Quiz01_$date", replace
+save `CCPX'_Quiz01 , replace
 
 **********************************************
 ****************Quiz02************************
@@ -97,7 +97,7 @@ by RE , sort: gen RE_duplicate = _n == 1
 drop if RE_duplicate== 0
 
 destring scoreQuiz02 , replace
-save "`CCPX'_Quiz02_$date" , replace
+save `CCPX'_Quiz02 , replace
 
 
 
@@ -151,7 +151,7 @@ by RE , sort: gen RE_duplicate = _n == 1
 drop if RE_duplicate== 0
 
 destring scoreQuiz03 , replace
-save "`CCPX'_Quiz03_$date" , replace
+save `CCPX'_Quiz03 , replace
 
 
 
@@ -206,7 +206,7 @@ by RE , sort: gen RE_duplicate = _n == 1
 drop if RE_duplicate== 0
 
 destring scoreQuiz04 , replace
-save "`CCPX'_Quiz04_$date" , replace
+save `CCPX'_Quiz04 , replace
 
 
 **********************************************
@@ -260,7 +260,7 @@ by RE , sort: gen RE_duplicate = _n == 1
 drop if RE_duplicate== 0
 
 destring scoreQuiz05 , replace
-save "`CCPX'_Quiz05_$date" , replace
+save `CCPX'_Quiz05 , replace
 
 
 **********************************************
@@ -315,7 +315,7 @@ by RE , sort: gen RE_duplicate = _n == 1
 drop if RE_duplicate== 0
 
 destring scoreQuiz06 , replace
-save "`CCPX'_Quiz06_$date" , replace
+save `CCPX'_Quiz06 , replace
 
 
 
@@ -371,7 +371,7 @@ by RE , sort: gen RE_duplicate = _n == 1
 drop if RE_duplicate== 0
 
 destring scoreQuiz07 , replace
-save "`CCPX'_Quiz07_$date" , replace
+save `CCPX'_Quiz07 , replace
 
 
 
@@ -428,7 +428,7 @@ sort Timestamp
 by RE , sort: gen RE_duplicate = _n == 1
 drop if RE_duplicate== 0
 
-save "`CCPX'_Quiz08_$date" , replace
+save `CCPX'_Quiz08 , replace
 
 
 /*
