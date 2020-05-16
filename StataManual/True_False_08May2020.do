@@ -30,6 +30,7 @@ not just 0 or 1; 0 is treated as false and any other numeric value as true.
 * ~  used to indicate   "not"
 * !  used to indicate	"not"
 * It is a matter of taste whether you use ~ or ! to indicate negation.
+cd "E:\Self_GitKraken\Working_Repo_GitHub\MyStataWork\StataManual\True_False\output"
 
 sysuse auto , clear
 
@@ -39,31 +40,23 @@ sysuse auto , clear
 * How many cars are foreign and has value 4 in rep78?
 
 putexcel set auto_result.xlsx, modify
-  
-count if foreign == 1 & rep78 == 4
 
+*putexcel formatting  
 putexcel (A1:B1), bold border("bottom", "medium", "black")
+putexcel (A1:A2), border("right", "medium", "black")
+*formatting ends
 
-putexcel (A1:A6), border("right", "medium", "black")
-
+*putexcel values
 putexcel A1=("This is about auto dataset")
-putexcel A2=("foreign cars with 4 rep78")
- 
-putexcel B2=`r(N)'
+putexcel B1=("Result")
 
+putexcel A2=("foreign cars with 4 rep78")
+count if foreign == 1 & rep78 == 4
+putexcel B2=`r(N)'
+* values ends here
 
 * One of most import command
 return list
-
-*Result in Excel
-cd "E:\Self_GitKraken\Working_Repo_GitHub\MyStataWork\StataManual\True_False\output"
-
-putexcel set auto_result.xlsx, modify
-
-putexcel (A1:B1), bold border("bottom", "medium", "black")
-
-putexcel (A1:A6), border("right", "medium", "black")
-
 
 * In Stata, the rule is that false logical expressions have value 0 and true logical expressions have value 1 
 * Thus logical expressions may be used to generate indicator variables 
