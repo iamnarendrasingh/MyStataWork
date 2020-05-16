@@ -135,4 +135,9 @@ list mpg if foreign == 1
 * list mpg if foreign is equal to list mpg if foreign == 1
 * Why ? read rule 2
 list mpg if foreign 
-
+
+
+* You can always check, either interactively or in a program,
+*  that a variable has only the values 0 and 1 by using assert:
+
+assert foreign == 0 | foreign == 1
