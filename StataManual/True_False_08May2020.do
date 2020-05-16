@@ -64,11 +64,22 @@ return list
 * which have values 0 or 1. 
 * The command
 
+*generate one missing value as our dataset does not have missing values.
+replace mpg = . in 58
 generate himpg = mpg > 30
 
+* What if mpg were missing? 
+* The rule is that Stata treats numeric missing values as higher than any other numeric value, 
+* so missing would certainly qualify as greater than 30, 
+* and any observation with mpg missing would be assigned 1 for this new variable.
 
+drop himpg 
 
+generate himpg = mpg > 30 if mpg < .
 
+* The same logic would apply if you were only interested in domestic cars:
+drop himpg
+generate himpg = mpg > 30 if foreign == 0
 
 
 **********************************************************************
