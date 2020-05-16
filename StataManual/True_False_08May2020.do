@@ -81,6 +81,28 @@ generate himpg = mpg > 30 if mpg < .
 drop himpg
 generate himpg = mpg > 30 if foreign == 0
 
+* Suppose we want to create a new variable in which we will put the frequencies of mpg being greater than 30, 
+* by categories of rep78:
+
+* dropping missing values 
+drop if mpg == .
+
+
+*++++++++++++++++++NN++N++++++++++++++++++++++++++++++++++++++++++++
+*+++++++++++++++++N+N+N+++++++++++++++++++++++++++++++++++++++++++++
+*++++++++++++++++N++NN++++++++++++++++++++++++++++++++++++++++++++++
+*+++++++++++++++N+++N+++++++++++++++++++++++++++++++++++++++++++++++
+sort rep78
+by rep78: generate nhimpg = sum(mpg > 30)
+by rep78: replace nhimpg = nhimpg[_N]
+* In the second statement, the function sum() produces a cumulative 
+* or running sum of mpg > 30. If mpg > 30, 1 is added to the sum; otherwise, 
+* 0 is added. This statement yields a running count of the number of observations for which mpg > 30. 
+* In the third statement,we replace the running count with its last value, the total count
+
+* Importance of "by"
+*This process is all done within the framework of by, 
+* for which data must be sorted on rep78, which is done first.
 
 **********************************************************************
 **********************************************************************
