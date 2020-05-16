@@ -38,10 +38,26 @@ sysuse auto , clear
 
 * How many cars are foreign and has value 4 in rep78?
 
+putexcel set auto_result.xlsx, modify
+  
 count if foreign == 1 & rep78 == 4
+
+putexcel (A1:B1), bold border("bottom", "medium", "black")
+
+putexcel (A1:A6), border("right", "medium", "black")
+
+putexcel A1=("This is about auto dataset")
+putexcel A2=("foreign cars with 4 rep78")
+ 
+putexcel B2=`r(N)'
+
+
+* One of most import command
+return list
 
 *Result in Excel
 cd "E:\Self_GitKraken\Working_Repo_GitHub\MyStataWork\StataManual\True_False\output"
+
 putexcel set auto_result.xlsx, modify
 
 putexcel (A1:B1), bold border("bottom", "medium", "black")
