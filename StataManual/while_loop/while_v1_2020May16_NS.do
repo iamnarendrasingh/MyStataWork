@@ -19,3 +19,23 @@ executed must appear on a new line;
 * while evaluates exp and, if it is true (nonzero) , 
 * repeats the process until exp evaluates to false (zero)
 
+
+clear *
+set more off
+* Example 1
+local a 1
+local b 0
+while (1) {
+   display in smcl as result `a', `b' _newline(1)
+   display in smcl as text "do-until/while loop"
+   display in smcl as result `a', `++b'
+   if (`a' <= `b') continue, break
+}
+
+local counter = 0
+local N = _N
+
+while  `counter' < `N' {
+  local counter = `counter' + 1
+}
+display `counter'
