@@ -117,3 +117,22 @@ egen nhimpg = total(mpg > 30), by(rep78)
 **********************************************************************
 **********************************************************************
 **********************************************************************
+
+
+
+
+
+
+* Rule 2: 
+* 		Logical or Boolean arguments, such as the argument to if or while, 
+* may take on any value, not just 0 or 1; 
+* 0 is treated as false and any other numeric value as true
+
+list mpg if foreign == 1
+* Stata lists mpg for those observations for which foreign is equal to 1 
+* (and does not list them if this is not so).
+
+* list mpg if foreign is equal to list mpg if foreign == 1
+* Why ? read rule 2
+list mpg if foreign 
+
