@@ -24,7 +24,18 @@ cd "E:\Self_GitKraken\Working_Repo_GitHub\MyStataWork\UCLA_online\Logistic Regre
 
 save binary.dta , replace 
 
+*	independant variable 
+* GPA (grade point average)
+* GRE (Graduate Record Exam scores)
+* rank [rank is a factor variable (i.e., categorical variable)]
 
+*dependant variable 
+*	admit
+
+summarize gre gpa
+tab rank
+tab admit
+tab rank admit
 logit admit gre gpa i.rank
 
 save binary_output.dta 
